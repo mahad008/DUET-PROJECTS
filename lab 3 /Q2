@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double rupees, dollars;
+    const double exchangeRate = 83.0; // 1 USD = 83 INR (example rate)
+
+    // Ask the user to enter amount in Rupees
+    cout << "Enter amount in Rupees (INR): ";
+    cin >> rupees;
+
+    // Convert to Dollars
+    dollars = rupees / exchangeRate;
+
+    // Display the result
+    cout << "Equivalent amount in US Dollars (USD): $" << dollars << endl;
+
+    return 0;
+}
