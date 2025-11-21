@@ -1,0 +1,35 @@
+#include <iostream> 
+using namespace std; 
+ 
+int main() { 
+    char grade; 
+ 
+    // Ask the user to enter a grade 
+    cout << "Enter student grade (A, B, C, D, F): "; 
+    cin >> grade; 
+ 
+    // Convert to uppercase for consistency 
+    grade = toupper(grade); 
+ 
+Lab 4 Solution 
+    // Use switch to match the grade 
+    switch (grade) { 
+        case 'A': 
+            cout << "Excellent" << endl; 
+            break; 
+        case 'B': 
+        case 'C': 
+            cout << "Well done" << endl; 
+            break; 
+        case 'D': 
+            cout << "You Passed" << endl; 
+            break; 
+        case 'F': 
+            cout << "Better Try Again" << endl; 
+            break; 
+        default: 
+            cout << "Invalid input" << endl; 
+    } 
+ 
+    return 0; 
+} 
