@@ -1,0 +1,34 @@
+#include <iostream> 
+using namespace std; 
+ 
+int main() { 
+    char ch; 
+ 
+    // Ask the user to enter a character 
+    cout << "Enter a single alphabet character: "; 
+    cin >> ch; 
+ 
+    // Convert character to lowercase for simpler comparison 
+    ch = tolower(ch); 
+ 
+    // Check if it's an alphabet character 
+    if (!isalpha(ch)) { 
+        cout << "Invalid input. Please enter an alphabet character." << endl; 
+        return 1; // Exit the program early 
+    } 
+ 
+    // Use switch-case to check for vowels 
+    switch (ch) { 
+        case 'a': 
+        case 'e': 
+        case 'i': 
+        case 'o': 
+        case 'u': 
+            cout << "It is a vowel!" << endl; 
+            break; 
+        default: 
+            cout << "It is a consonant." << endl; 
+    } 
+ 
+    return 0; 
+} 
