@@ -1,0 +1,29 @@
+#include <iostream> 
+using namespace std; 
+ 
+int main() { 
+    int a, b; 
+ 
+    // Prompt user for input 
+    cout << "Enter two positive integers: "; 
+    cin >> a >> b; 
+ 
+    // Input validation 
+    if (a <= 0 || b <= 0) { 
+        cout << "Please enter positive integers only." << endl; 
+        return 1; 
+    } 
+ 
+    // Euclidean Algorithm using while loop 
+    while (a != b) { 
+        if (a > b) 
+            a = a - b; 
+        else 
+            b = b - a; 
+    } 
+ 
+    // Now a == b, which is the GCD 
+    cout << "GCD is: " << a << endl; 
+ 
+    return 0; 
+}
