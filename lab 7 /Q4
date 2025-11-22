@@ -1,0 +1,33 @@
+#include <iostream> 
+using namespace std; 
+ 
+int main() { 
+    char choice; 
+ 
+    do { 
+        int num; 
+        unsigned long long factorial = 1; 
+ 
+        // Input number 
+        cout << "Enter a non-negative integer to calculate its factorial: "; 
+        cin >> num; 
+ 
+        if (num < 0) { 
+            cout << "Factorial is not defined for negative numbers." << endl; 
+        } else { 
+            for (int i = 1; i <= num; ++i) { 
+                factorial *= i; 
+            } 
+            cout << "Factorial of " << num << " is: " << factorial << endl; 
+        } 
+ 
+        // Ask if user wants to calculate again 
+        cout << "Do you want to calculate another factorial? (y/n): "; 
+        cin >> choice; 
+        choice = tolower(choice);  // Make it case-insensitive 
+ 
+    } while (choice == 'y'); 
+ 
+    cout << "Program ended." << endl; 
+    return 0; 
+}
