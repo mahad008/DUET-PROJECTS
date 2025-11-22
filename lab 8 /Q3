@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int SIZE = 8;
+    int arr[SIZE];
+
+    cout << "Enter 8 numbers:\n";
+    for (int i = 0; i < SIZE; ++i) {
+        cin >> arr[i];
+    }
+
+    int searchNum;
+    cout << "Enter number to search: ";
+    cin >> searchNum;
+
+    // Search
+    bool found = false;
+    for (int i = 0; i < SIZE; ++i) {
+        if (arr[i] == searchNum) {
+            found = true;
+            break;
+        }
+    }
+    cout << (found ? "Number found.\n" : "Number not found.\n");
+
+    // Find highest and lowest
+    int highest = arr[0], lowest = arr[0];
+    for (int i = 1; i < SIZE; ++i) {
+        if (arr[i] > highest) highest = arr[i];
+        if (arr[i] < lowest) lowest = arr[i];
+    }
+
+    cout << "Highest number: " << highest << endl;
+    cout << "Lowest number: " << lowest << endl;
+
+    return 0;
+}
