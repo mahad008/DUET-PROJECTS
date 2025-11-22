@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch;
+
+    // Prompt user for input
+    cout << "Enter a character: ";
+    cin >> ch;
+
+    // Check the type of character
+    if (ch >= 'A' && ch <= 'Z') {
+        cout << "The character is an UPPER CASE letter." << endl;
+    } else if (ch >= 'a' && ch <= 'z') {
+        cout << "The character is a LOWER CASE letter." << endl;
+    } else {
+        cout << "The character is a SPECIAL CHARACTER." << endl;
+    }
+
+    return 0;
+}
